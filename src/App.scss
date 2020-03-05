@@ -1,0 +1,69 @@
+@import "./variables.scss";
+@import "../node_modules/materialize-css/sass/materialize.scss";
+
+
+html, body {
+  @extend .blue-grey, .darken-3;
+  @extend .teal-text, .text-lighten-5;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+  font-weight: 200;
+  letter-spacing: .055em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    letter-spacing: initial;
+}
+
+time {
+  margin:  auto .3em;
+  border-bottom: 1px dotted map-get($blue-grey, "lighten-1");
+  font-weight: 300;
+  cursor: help;
+}
+
+.card,
+.card-panel,
+.collection,
+.collection-item,
+.collection-header {
+  @extend .blue-grey, .darken-2;
+  &.project {
+    min-height: 200px;
+  }
+  & .card-content {
+    & .repo-name {
+      border-bottom: 1px solid map-get($blue-grey, "darken-3");
+      & a { @extend .white-text; }
+      
+    }
+
+    & .project-description {
+      margin: 1em;
+    }
+  }
+
+  &.horizontal {
+    .card-image {
+      width: 12em;
+      overflow: hidden;
+    }
+  }
+}
+
+.collection {
+  border: 0;
+  &.with-header .collection-header {
+    border-bottom: map-get($blue-grey, "darken-3") 1px dashed;
+    text-align: right;
+  }
+  & .collection-item {
+    border-bottom: map-get($blue-grey, "darken-3") 1px dashed;
+  }
+}

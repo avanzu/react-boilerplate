@@ -1,0 +1,11 @@
+.project-initial {
+    font-size: 200;
+    font-family: fantasy;
+}
+
+.card-image {
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
